@@ -33,7 +33,6 @@ return [
     |
     */
 
-    'guard' => ['web'],
 
     /*
     |--------------------------------------------------------------------------
@@ -79,5 +78,12 @@ return [
         'encrypt_cookies' => App\Http\Middleware\EncryptCookies::class,
         'verify_csrf_token' => App\Http\Middleware\VerifyCsrfToken::class,
     ],
+
+    'guard' => 'api',
+    'providers' => [
+    'api' => [
+        'driver' => 'sanctum',
+    ],
+],
 
 ];
